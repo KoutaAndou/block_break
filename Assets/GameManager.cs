@@ -8,14 +8,17 @@ public class GameManager : MonoBehaviour
     public Block[] blocks;
     public GameObject gameOverUI;
     public GameObject gameClearUI;
+    public GameObject BGM;
+    public GameObject SE;
 
     private bool isGameClear = false;
+    private AudioSource audioSource = null;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -64,6 +67,4 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("game");
     }
-
-
 }

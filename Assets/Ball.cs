@@ -31,6 +31,11 @@ public class Ball : MonoBehaviour
             Destroy(this.gameObject);
             myManager.GameOver();
         }
+
+        if(collision.gameObject.tag == "Wall")
+        {
+
+        }
     }
 
 }
